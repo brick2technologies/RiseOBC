@@ -77,26 +77,39 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Buttons */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link to="/join">
-              <motion.button
-                whileHover={{ scale: 1.07, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-2.5 rounded-xl bg-[#01A3EB] text-white font-semibold shadow-lg hover:bg-[#028ac7] transition-all"
-              >
-                Join the Movement
-              </motion.button>
-            </Link>
 
-            <Link to="/volunteer">
-              <motion.button
-                whileHover={{ scale: 1.07, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-2.5 rounded-xl border-[2px] border-[#01A3EB] text-[#01A3EB] font-semibold hover:bg-[#E8F9FF] transition-all"
-              >
-                Become a Volunteer
-              </motion.button>
-            </Link>
-          </div>
+  <Link to="/join">
+    <motion.button
+      whileHover={{ scale: 1.07, y: -2 }}
+      whileTap={{ scale: 0.95 }}
+      className="px-6 py-2.5 rounded-xl bg-[#01A3EB] text-white font-semibold shadow-lg hover:bg-[#028ac7] transition-all"
+    >
+      Join the Movement
+    </motion.button>
+  </Link>
+
+  <Link to="/volunteer">
+    <motion.button
+      whileHover={{ scale: 1.07, y: -2 }}
+      whileTap={{ scale: 0.95 }}
+      className="px-6 py-2.5 rounded-xl border-[2px] border-[#24B250] text-[#24B250] font-semibold hover:bg-[#E8F9FF] transition-all"
+    >
+      Become a Volunteer
+    </motion.button>
+  </Link>
+
+  <Link to="/donate">
+    <motion.button
+      whileHover={{ scale: 1.07, y: -2 }}
+      whileTap={{ scale: 0.95 }}
+      className="px-6 py-2.5 rounded-xl bg-[#01A3EB] text-white font-semibold shadow-lg hover:bg-[#028ac7] transition-all"
+    >
+      Donate
+    </motion.button>
+  </Link>
+
+</div>
+
 
           {/* Mobile Menu Button */}
           <motion.button
@@ -170,6 +183,14 @@ const Navbar: React.FC = () => {
                     className="w-full py-3 rounded-xl border-[2px] border-[#01A3EB] text-[#01A3EB] font-semibold hover:bg-[#E8F9FF]"
                   >
                     Become a Volunteer
+                  </motion.button>
+                </Link>
+                <Link to="/donate">
+                  <motion.button
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full py-3 rounded-xl bg-[#01A3EB] text-white font-semibold shadow-md hover:bg-[#028ac7]"
+                  >
+                    Donate
                   </motion.button>
                 </Link>
               </div>

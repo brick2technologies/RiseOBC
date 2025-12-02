@@ -85,7 +85,7 @@ const AboutSection: React.FC = () => {
             >
               The Man Behind{" "}
               <span className="text-[#24B250] drop-shadow-md">
-                RISE Movement
+                DANDA Movement
               </span>
             </motion.h2>
 

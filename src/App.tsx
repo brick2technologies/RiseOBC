@@ -16,11 +16,13 @@ import GalleryPage from "./pages/GalleryPage";
 import ContactPage from "./pages/ContactPage";
 import DonationPage from "./pages/Donatepage";
 import VolunteerStatsSection from "./components/VolunteerStats";
+import SocialBar from "./components/SocialMediaBar";
 
 const App = () => {
   return (
     <Router>
       <Navbar />
+      <SocialBar />
 
       <Routes>
 

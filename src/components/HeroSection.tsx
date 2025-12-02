@@ -30,8 +30,6 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-
-
           {/* OTP COUNTER BOXES BELOW IMAGE */}
           <div className="mt-6 flex flex-col items-center">
             <div className="flex gap-2">
@@ -49,7 +47,7 @@ const HeroSection: React.FC = () => {
             </div>
 
             <p className="mt-2 text-sm font-semibold text-blue-900 tracking-wide">
-              Cases Filed
+              Letters Collected
             </p>
           </div>
 
@@ -90,7 +88,7 @@ const HeroSection: React.FC = () => {
 
             {/* SUBTITLE */}
             <span
-              className="block text-4xl md:text-5xl mt-2"
+              className="block text-4xl md:text-4xl mt-2"
               style={{
                 background: 'linear-gradient(to right, #1E3A8A, #3B82F6, #10B981)',
                 WebkitBackgroundClip: 'text',
@@ -98,7 +96,7 @@ const HeroSection: React.FC = () => {
                 backgroundClip: 'text',
               }}
             >
-              OBC's National Movement for Political Reservation in All Assemblies & Parliament
+              OBC's <span className="text-[#24B250]">INDIAN</span> National Movement for Political Reservation in All State Assemblies, Parliament & Local Bodies
             </span>
           </motion.h1>
 
@@ -115,34 +113,38 @@ const HeroSection: React.FC = () => {
 
           {/* Quote with Enhanced Styling */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2 }}
-            className="relative mt-8 px-4"
-          >
-            <div className="absolute -top-2 left-1/2 md:left-8 transform -translate-x-1/2 md:translate-x-0 text-6xl text-blue-300 opacity-30">"</div>
-            <p className="italic text-lg md:text-xl text-gray-800 font-medium leading-relaxed bg-white/90 backdrop-blur-md py-6 px-8 rounded-2xl shadow-lg border border-white/50 max-w-3xl mx-auto text-center">
-              An International Organisation
-              <br />
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1.2 }}
+  className="relative mt-8 px-4"
+>
+  <div className="absolute -top-2 left-1/2 md:left-8 transform -translate-x-1/2 md:translate-x-0 text-6xl text-blue-300 opacity-30">"</div>
 
-              <span
-                className="block font-semibold text-3xl md:text-3xl mt-3 tracking-tight"
-              // style={{
-              //   background: 'linear-gradient(to right, #1E3A8A, #3B82F6, #10B981)',
-              //   WebkitBackgroundClip: 'text',
-              //   WebkitTextFillColor: 'transparent',
-              //   backgroundClip: 'text',
-              // }}
-              >
-                Under Mission For The Poor Charitable Trust
-              </span>
+  <p className="italic text-lg md:text-xl text-gray-800 font-medium leading-relaxed bg-white/90 backdrop-blur-md py-6 px-8 rounded-2xl shadow-lg border border-white/50 max-w-3xl mx-auto text-center">
 
-              <span className="block mt-3 text-gray-700 text-base md:text-lg font-normal">
-                Reg No: 205/IV/2012
-              </span>
-            </p>
+    <span className="block mt-4 text-gray-800 text-base md:text-2xl font-semibold leading-snug">
+      <span className="uppercase font-bold">DANDA-YATRA </span>
+      Movement for OBC's Constitutional Reservations Campaign &
+      One Crore (1,00,00,000) Letters to the Prime Minister  
+      for Ensuring OBC's Reservation
+    </span>
 
-          </motion.div>
+    <span className="block font-semibold text-3xl md:text-lg mt-3 tracking-tight">
+      Under Mission For The Poor Charitable Trust
+    </span>
+
+    <span className="block mt-3 text-gray-700 text-base md:text-lg font-normal">
+      Reg No: 205/IV/2012
+    </span>
+
+    {/* Author Line Added */}
+    <span className="block mt-4 text-gray-600 text-sm md:text-base font-medium">
+      Author: <span className="font-semibold text-blue-600">Vaddepalli Ramkrishna</span>
+    </span>
+
+  </p>
+</motion.div>
+
 
           {/* CTA BUTTONS with Enhanced Styling */}
           <motion.div
