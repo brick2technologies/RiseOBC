@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+html{
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Ranger Regular Shadow";
+  src: url(/src/assets/Ranger_Regular_Shadow.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ranger Regular";
+  src: url(/src/assets/Ranger_Regular.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.SloganFont {
+  font-family: "Ranger Regular", sans-serif;
+}
+
+@keyframes neonPulse {
+  0%, 100% { filter: brightness(1) blur(3px); }
+  50% { filter: brightness(1.5) blur(8px); }
+}
+
+.animate-neon {
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
