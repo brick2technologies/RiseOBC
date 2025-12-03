@@ -19,6 +19,7 @@ import VolunteerStatsSection from "./components/VolunteerStats";
 import SocialBar from "./components/SocialMediaBar";
 import JoinMovementModal from "./components/MovementModal";
 import DonarPage from "./pages/DonarsPage";
+import ScrollManager from "./components/ScrollManager";
 
 
 
@@ -28,6 +29,7 @@ const App = () => {
     <Router>
      <Navbar onJoinClick={() => setIsJoinOpen(true)} />
       <SocialBar />
+      <ScrollManager />
       <JoinMovementModal
         isOpen={isJoinOpen}
         onClose={() => setIsJoinOpen(false)}
