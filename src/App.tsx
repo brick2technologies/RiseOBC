@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { useState } from "react";
 
 import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
@@ -17,12 +17,21 @@ import ContactPage from "./pages/ContactPage";
 import DonationPage from "./pages/Donatepage";
 import VolunteerStatsSection from "./components/VolunteerStats";
 import SocialBar from "./components/SocialMediaBar";
+import JoinMovementModal from "./components/MovementModal";
+import DonarPage from "./pages/DonarsPage";
+
+
 
 const App = () => {
+  const [isJoinOpen, setIsJoinOpen] = useState(false);
   return (
     <Router>
-      <Navbar />
+     <Navbar onJoinClick={() => setIsJoinOpen(true)} />
       <SocialBar />
+      <JoinMovementModal
+        isOpen={isJoinOpen}
+        onClose={() => setIsJoinOpen(false)}
+      />
 
       <Routes>
 
@@ -31,13 +40,13 @@ const App = () => {
           path="/"
           element={
             <main>
-              <HeroSection />
+              <HeroSection onJoinClick={() => setIsJoinOpen(true)} />
               <VolunteerStatsSection />
               <AboutSection />
-              <MissionSection />
+              <MissionSection onJoinClick={() => setIsJoinOpen(true)}/>
               <Activities />
               <Donation />
-              <ContactSection />
+              <ContactSection onJoinClick={() => setIsJoinOpen(true)}/>
               <FloatingActions />
             </main>
           }
@@ -49,6 +58,9 @@ const App = () => {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/donate" element={<DonationPage />} />
+        <Route path="/donors" element={<DonarPage />} />
+        
+        
 
       </Routes>
     </Router>

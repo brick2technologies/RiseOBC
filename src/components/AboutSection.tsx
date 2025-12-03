@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Target, Users, Heart, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AboutSection: React.FC = () => {
   const containerVariants = {
@@ -71,13 +72,7 @@ const AboutSection: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="space-y-8"
           >
-            {/* Badge */}
-            <motion.div variants={itemVariants}>
-              <span className="inline-block px-5 py-2 bg-[#01A3EB]/10 text-[#003B73] border border-[#01A3EB]/30 rounded-full text-sm font-semibold shadow-sm">
-                About Us
-              </span>
-            </motion.div>
-
+            
             {/* Heading */}
             <motion.h2
               variants={itemVariants}
@@ -165,6 +160,7 @@ const AboutSection: React.FC = () => {
 
             {/* Button */}
             <motion.div variants={itemVariants}>
+              <Link to="/about">
               <motion.button
                 whileHover={{ scale: 1.05, x: 5 }}
                 whileTap={{ scale: 0.95 }}
@@ -185,6 +181,7 @@ const AboutSection: React.FC = () => {
                   />
                 </svg>
               </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -200,9 +197,9 @@ const AboutSection: React.FC = () => {
 
             <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl border-[10px] border-white">
               <img
-                src="/images/about-leader.jpg"
+                src="/Vaddepalli-Ramakrishna.png"
                 alt="Vaddepalli Ramakrishna"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover right-3"
               />
 
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>

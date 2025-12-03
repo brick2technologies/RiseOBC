@@ -65,11 +65,11 @@ const DonationPage: React.FC = () => {
 
             {/* Bank Info */}
             <div className="space-y-2 text-lg text-gray-800">
-              <p><b>Bank Name:</b> ———————————</p>
               <p><b>Account Name:</b> Mission for the Poor Charitable Trust</p>
-              <p><b>Account Number:</b> ———————————</p>
-              <p><b>IFSC Code:</b> ———————————</p>
-              <p><b>Branch:</b> ———————————</p>
+              <p><b>Bank:</b>Punjab national bank</p>
+              <p><b>Account Number:</b>3935002100009691</p>
+              <p><b>IFSC Code:</b>  PUNB0393500</p>
+              <p><b>Branch:</b>Punjab national bank ,Habsiguda,Hyderabad</p>
             </div>
           </motion.div>
         </div>

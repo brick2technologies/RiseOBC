@@ -101,12 +101,22 @@ const AboutPage: React.FC = () => {
           animate={{ opacity: 1 }}
           className="rounded-3xl overflow-hidden shadow-2xl mb-12"
         >
-          <img
-            src="/images/placeholder-rama-main.jpg"
-            alt="Sri Vaddepalli Ramakrishna"
-            className="w-full object-cover h-72 md:h-96"
-          />
+          <picture>
+            {/* Desktop (≥1024px) */}
+            <source media="(min-width: 1024px)" srcSet="/About-desktop.png" />
+
+            {/* Tablet (≥768px) */}
+            <source media="(min-width: 768px)" srcSet="/About-hero.png" />
+
+            {/* Mobile (default) */}
+            <img
+              src="/About-hero.png"
+              alt="Sri Vaddepalli Ramakrishna"
+              className="w-full object-cover h-72 md:h-96"
+            />
+          </picture>
         </motion.div>
+
 
         {/* Early Life */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
@@ -116,7 +126,7 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.7 }}
             className="rounded-2xl overflow-hidden shadow-lg"
           >
-            <img src="/images/placeholder-early-life.jpg" alt="Early life" className="w-full h-64 object-cover"/>
+            <img src="/images/placeholder-early-life.jpg" alt="Early life" className="w-full h-64 object-cover" />
           </motion.div>
 
           <motion.div
@@ -161,7 +171,7 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.7 }}
             className="rounded-2xl overflow-hidden shadow-lg order-1 md:order-2"
           >
-            <img src="/images/placeholder-job-resign.jpg" alt="Resignation" className="w-full h-64 object-cover"/>
+            <img src="/images/placeholder-job-resign.jpg" alt="Resignation" className="w-full h-64 object-cover" />
           </motion.div>
         </div>
 
@@ -176,7 +186,7 @@ const AboutPage: React.FC = () => {
               transition={{ duration: 0.6, delay: i * 0.08 }}
               className="rounded-2xl overflow-hidden shadow-lg bg-white"
             >
-              <img src={item.img} alt={`battle-${i}`} className="w-full h-48 object-cover"/>
+              <img src={item.img} alt={`battle-${i}`} className="w-full h-48 object-cover" />
               <div className="p-5 text-gray-700 font-medium text-base leading-relaxed">
                 {item.text}
               </div>
@@ -192,7 +202,7 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.7 }}
             className="rounded-2xl overflow-hidden shadow-lg"
           >
-            <img src="/images/placeholder-trust.jpg" alt="Mission for the Poor Trust" className="w-full h-64 object-cover"/>
+            <img src="/images/placeholder-trust.jpg" alt="Mission for the Poor Trust" className="w-full h-64 object-cover" />
           </motion.div>
 
           <motion.div
@@ -227,7 +237,7 @@ const AboutPage: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="rounded-xl overflow-hidden shadow-md"
             >
-              <img src="/images/placeholder-yogi-achyutha.jpg" alt="Yogi Achyutha Ashram" className="w-full h-48 object-cover"/>
+              <img src="/images/placeholder-yogi-achyutha.jpg" alt="Yogi Achyutha Ashram" className="w-full h-48 object-cover" />
             </motion.div>
 
             <div className="md:col-span-2">
@@ -250,7 +260,7 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="rounded-2xl overflow-hidden shadow-lg"
           >
-            <img src="/images/placeholder-family-photo.jpg" alt="Family" className="w-full h-72 object-cover"/>
+            <img src="/images/placeholder-family-photo.jpg" alt="Family" className="w-full h-72 object-cover" />
           </motion.div>
 
           <div className="lg:col-span-2">
@@ -275,7 +285,7 @@ const AboutPage: React.FC = () => {
                   transition={{ duration: 0.5, delay: idx * 0.06 }}
                   className="flex items-start gap-4 p-4 rounded-xl bg-white shadow"
                 >
-                  <img src={m.img} alt={m.name} className="w-20 h-20 object-cover rounded-lg flex-shrink-0"/>
+                  <img src={m.img} alt={m.name} className="w-20 h-20 object-cover rounded-lg flex-shrink-0" />
                   <div>
                     <div className="text-sm text-gray-500">{m.role}</div>
                     <div className="font-semibold text-gray-900">{m.name}</div>

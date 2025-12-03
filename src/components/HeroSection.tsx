@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import VolunteerModal from "./VolunteerModal";
 
-const HeroSection: React.FC = () => {
+interface NavbarProps {
+  onJoinClick: () => void;
+}
+
+const HeroSection: React.FC<NavbarProps> = ({ onJoinClick }) => {
+
+  const [isVolunteerOpen, setIsVolunteerOpen] = useState(false);
   return (
+    <>
     <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-[#01A3EB] via-[#CDFFE2] to-[#24B250] px-6 py-20 overflow-hidden">
 
       {/* Animated Background Elements */}
@@ -113,37 +121,37 @@ const HeroSection: React.FC = () => {
 
           {/* Quote with Enhanced Styling */}
           <motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1.2 }}
-  className="relative mt-8 px-4"
->
-  <div className="absolute -top-2 left-1/2 md:left-8 transform -translate-x-1/2 md:translate-x-0 text-6xl text-blue-300 opacity-30">"</div>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className="relative mt-8 px-4"
+          >
+            <div className="absolute -top-2 left-1/2 md:left-8 transform -translate-x-1/2 md:translate-x-0 text-6xl text-blue-300 opacity-30">"</div>
 
-  <p className="italic text-lg md:text-xl text-gray-800 font-medium leading-relaxed bg-white/90 backdrop-blur-md py-6 px-8 rounded-2xl shadow-lg border border-white/50 max-w-3xl mx-auto text-center">
+            <p className="italic text-lg md:text-xl text-gray-800 font-medium leading-relaxed bg-white/90 backdrop-blur-md py-6 px-8 rounded-2xl shadow-lg border border-white/50 max-w-3xl mx-auto text-center">
 
-    <span className="block mt-4 text-gray-800 text-base md:text-2xl font-semibold leading-snug">
-      <span className="uppercase font-bold">DANDA-YATRA </span>
-      Movement for OBC's Constitutional Reservations Campaign &
-      One Crore (1,00,00,000) Letters to the Prime Minister  
-      for Ensuring OBC's Reservation
-    </span>
+              <span className="block mt-4 text-gray-800 text-base md:text-2xl font-semibold leading-snug">
+                <span className="uppercase font-bold">DANDA-YATRA </span>
+                Movement for OBC's Constitutional Reservations Campaign &
+                One Crore (1,00,00,000) Letters to the Prime Minister
+                for Ensuring OBC's Reservation
+              </span>
 
-    <span className="block font-semibold text-3xl md:text-lg mt-3 tracking-tight">
-      Under Mission For The Poor Charitable Trust
-    </span>
+              <span className="block font-semibold text-3xl md:text-lg mt-3 tracking-tight">
+                Under Mission For The Poor Charitable Trust
+              </span>
 
-    <span className="block mt-3 text-gray-700 text-base md:text-lg font-normal">
-      Reg No: 205/IV/2012
-    </span>
+              <span className="block mt-3 text-gray-700 text-base md:text-lg font-normal">
+                Reg No: 205/IV/2012
+              </span>
 
-    {/* Author Line Added */}
-    <span className="block mt-4 text-gray-600 text-sm md:text-base font-medium">
-      Author: <span className="font-semibold text-blue-600">Vaddepalli Ramkrishna</span>
-    </span>
+              {/* Author Line Added */}
+              <span className="block mt-4 text-gray-600 text-sm md:text-base font-medium">
+                Author: <span className="font-semibold text-blue-600">Vaddepalli Ramkrishna</span>
+              </span>
 
-  </p>
-</motion.div>
+            </p>
+          </motion.div>
 
 
           {/* CTA BUTTONS with Enhanced Styling */}
@@ -154,6 +162,7 @@ const HeroSection: React.FC = () => {
             className="mt-10 flex flex-col md:flex-row justify-center md:justify-start gap-4"
           >
             <motion.button
+              onClick={onJoinClick}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-4 rounded-2xl bg-gradient-to-r from-blue-900 to-blue-600 text-white font-bold text-lg shadow-2xl hover:shadow-blue-500 hover:shadow-opacity-50 transition-all duration-300 relative overflow-hidden group"
@@ -163,6 +172,7 @@ const HeroSection: React.FC = () => {
             </motion.button>
 
             <motion.button
+            onClick={() => setIsVolunteerOpen(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-4 rounded-2xl border-2 border-blue-900 bg-white bg-opacity-80 backdrop-blur-sm text-blue-900 font-bold text-lg shadow-xl hover:shadow-2xl hover:bg-blue-50 transition-all duration-300"
@@ -183,6 +193,11 @@ const HeroSection: React.FC = () => {
 
       </div>
     </section>
+
+   <VolunteerModal open={isVolunteerOpen} setOpen={setIsVolunteerOpen} />
+
+
+    </>
   );
 };
 

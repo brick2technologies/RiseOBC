@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import { Facebook, Instagram, Youtube} from "lucide-react";
 
 const SocialBar = () => {
   return (
@@ -35,14 +35,14 @@ const SocialBar = () => {
       </a>
 
       {/* Twitter */}
-      <a
+      {/* <a
         href="https://twitter.com"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-white shadow-lg p-3 rounded-full hover:bg-blue-100 transition-all flex items-center justify-center"
       >
         <Twitter className="text-sky-500" size={22} />
-      </a>
+      </a> */}
     </div>
   );
 };

@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+
 import {
   Mail,
   Phone,
   Facebook,
-  Twitter,
+
   Instagram,
   Linkedin,
   MessageCircle,
 } from "lucide-react";
+import VolunteerModal from "./VolunteerModal";
 
-const ContactSection: React.FC = () => {
+
+interface NavbarProps {
+  onJoinClick: () => void;
+}
+
+const ContactSection: React.FC<NavbarProps> = ({ onJoinClick }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -18,6 +25,7 @@ const ContactSection: React.FC = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isVolunteerOpen, setIsVolunteerOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,25 +47,34 @@ const ContactSection: React.FC = () => {
     {
       icon: Phone,
       title: "Call Us",
-      detail: "+91 98765 43210",
+      detail: "+91 92925 05473",
       color: "from-[#01A3EB] to-[#0679b0]",
     },
     {
       icon: Mail,
       title: "Email Us",
-      detail: "info@obcmovement.org",
+      detail: "dandamovement@riseobc.in",
       color: "from-[#24B250] to-[#1a8c3b]",
     },
   ];
+  const XIcon = () => (
+  <img
+    src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=000000"
+    className="w-5 h-5"
+    alt="YouTube"
+  />
+);
+
 
   const socialLinks = [
     { icon: Facebook, href: "#", color: "hover:bg-blue-500" },
-    { icon: Twitter, href: "#", color: "hover:bg-blue-400" },
+    { icon: XIcon, href: "#", color: "hover:bg-blue-400" },
     { icon: Instagram, href: "#", color: "hover:bg-[#d6249f]" },
     { icon: Linkedin, href: "#", color: "hover:bg-blue-700" },
   ];
 
   return (
+    <>
     <section className="relative py-20 bg-gradient-to-b from-white via-[#EAF7FF] to-[#F3FFF6] overflow-hidden">
       
       {/* Soft Background Blobs */}
@@ -234,10 +251,14 @@ const ContactSection: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                <button className="w-full py-3 rounded-xl bg-[#01A3EB] text-white font-bold shadow-sm hover:bg-[#017fb6]">
+                <button 
+                onClick={onJoinClick}
+                className="w-full py-3 rounded-xl bg-[#01A3EB] text-white font-bold shadow-sm hover:bg-[#017fb6]">
                   Join the Movement
                 </button>
-                <button className="w-full py-3 rounded-xl border-2 border-[#24B250] text-[#24B250] font-bold hover:bg-[#e6ffef]">
+                <button
+                onClick={() => setIsVolunteerOpen(true)}
+                className="w-full py-3 rounded-xl border-2 border-[#24B250] text-[#24B250] font-bold hover:bg-[#e6ffef]">
                   Become a Volunteer
                 </button>
               </div>
@@ -247,6 +268,9 @@ const ContactSection: React.FC = () => {
 
       </div>
     </section>
+
+    <VolunteerModal open={isVolunteerOpen} setOpen={setIsVolunteerOpen} />
+    </>
   );
 };
 

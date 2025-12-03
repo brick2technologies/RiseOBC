@@ -8,7 +8,7 @@ const VolunteerTable = () => {
     { label: "Service Legal Experts", count: "6,000", enroll: "0", reached: "0", balance: "6,000" },
     { label: "Service doctors", count: "3,000", enroll: "0", reached: "0", balance: "3,000" },
     { label: "Rise Media Promoters", count: "6,000", enroll: "0", reached: "0", balance: "6,000" },
-     { label: "Fund Raisers India/Abroad", count: "10,000", enroll: "0", reached: "0", balance: "10,000" },
+    //  { label: "Fund Raisers India/Abroad", count: "10,000", enroll: "0", reached: "0", balance: "10,000" },
   ];
 
   return (

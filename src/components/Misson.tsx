@@ -9,7 +9,12 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const MissionSection: React.FC = () => {
+
+interface NavbarProps {
+  onJoinClick: () => void;
+}
+
+const MissionSection: React.FC<NavbarProps> = ({ onJoinClick }) => {
   const missionPoints = [
     {
       icon: Target,
@@ -239,6 +244,7 @@ const MissionSection: React.FC = () => {
               className="pt-4"
             >
               <motion.button
+              onClick={onJoinClick}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-10 py-5 rounded-2xl text-white font-black text-lg md:text-xl shadow-xl transition-all duration-300 flex items-center gap-3"
