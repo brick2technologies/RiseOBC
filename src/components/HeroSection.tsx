@@ -41,7 +41,7 @@ const HeroSection: React.FC<NavbarProps> = ({ onJoinClick }) => {
           {/* OTP COUNTER BOXES BELOW IMAGE */}
           <div className="mt-6 flex flex-col items-center">
             <div className="flex gap-2">
-              {Array.from({ length: 8 }).map((_, i) => (
+              {Array.from({ length: 9 }).map((_, i) => (
                 <div
                   key={i}
                   className="w-12 h-16 flex items-center justify-center text-2xl font-extrabold

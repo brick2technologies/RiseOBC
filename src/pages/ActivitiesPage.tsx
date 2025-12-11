@@ -382,6 +382,11 @@ const ActivitiesPage: React.FC = () => {
           <div className="space-y-8">
             <TimelineItem
               year="1984"
+              title="Started Career"
+              desc="His first job was working in P&T (Postal and Telegraph) Department"
+            />
+            <TimelineItem
+              year="1984"
               title="Resigned from Education Department"
               desc="Resigned as a teacher (25 June 1984) and later joined Revenue Department on 26 June 1984 — always guided by principle."
               img="/images/placeholder-timeline-1.jpg"

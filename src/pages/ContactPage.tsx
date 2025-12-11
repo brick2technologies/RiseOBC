@@ -151,9 +151,7 @@ const ContactPage: React.FC = () => {
             <div className="mt-8 bg-[#E8FFF1] p-6 rounded-2xl shadow-inner">
               <h3 className="text-2xl font-bold text-[#24B250] mb-3">Support Our Mission</h3>
               <p className="text-gray-700 text-lg leading-relaxed">
-                Your support strengthens our fight for farmers' rights, justice for victims,  
-                education for the poor, healthcare for rural families, and legal battles  
-                that protect the dignity and future of thousands.
+                Your support now highly needed to National wide movement I.e RISE - DANDA  YATRA - Movement for OBC’s constitutional reservations.
               </p>
 
               <a

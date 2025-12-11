@@ -65,10 +65,16 @@ const AboutPage: React.FC = () => {
       details: "BBA (London), MIS (Chicago). Married to Vijay (Software Developer) in 2024.",
     },
     {
-      role: "Brothers",
+      role: " Elder Brothers",
       name: "Visweswara Rao (Late) & Vaddepalli Nageshwara Rao",
       img: "/images/placeholder-brothers.jpg",
       details: "Both served in Revenue Department. Nageshwara Rao retired as Tahsildar (Pitlam).",
+    },
+    {
+      role: " Younger Brother",
+      name: " vaddepalli Sreedhar Hari",
+      img: "/images/placeholder-brothers.jpg",
+      details: "Hari having a own recognized high school in Hyderabad",
     },
   ];
 

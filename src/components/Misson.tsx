@@ -143,6 +143,16 @@ const MissionSection: React.FC<NavbarProps> = ({ onJoinClick }) => {
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                   <p className="text-base md:text-lg text-gray-800 font-medium">
+                    Ancient yoga speaker, practitioner and Researcher.
+                  </p>
+                </li>
+
+                <li className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full mt-1 flex items-center justify-center"
+                    style={{ backgroundColor: "#24B250" }}>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <p className="text-base md:text-lg text-gray-800 font-medium">
                     Stop exploitation of OBC communities and restore their constitutional rights.
                   </p>
                 </li>
